@@ -53,6 +53,10 @@ public class recursionIteration {
 		System.out.println("Entering IsArrayPrimeIter");
 		boolean primeFlag = true;
 		
+		if (arr[i] == 2 || arr[i] == 1) {
+			primeFlag = false;
+			return primeFlag;				
+		}
 		for (int i = 0; i < size; i++) {
 			for (int j = 2; j < arr[i]; j++) {
 				if (arr[i] % j == 0) {
